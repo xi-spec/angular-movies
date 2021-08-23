@@ -21,14 +21,43 @@
 </div>
 
 <main>
-  <ul>
-    <li *ngFor="let genre of movie$.genres">
-      {{ genre.name }}
-    </li>
-  </ul>
+  <div class="detail">
+    <div class="detail__genres">
+      <ul>
+        <li *ngFor="let genre of movie$.genres">
+          <span>
+            {{ genre.name }}
+          </span>
+        </li>
+      </ul>
+      <div class="detail__rate">
+        <span class="material-icons-outlined detail__rate__star"> star </span>
+        <span class="detail__rate__item detail_rate__number">{{
+          movie$.vote_average / 2 | number: "1.2-2"
+        }}</span>
+      </div>
+    </div>
 
-  <div>
-    <h1>{{movie$.title}}</h1>
-    <p>{{ movie$.overview }}}</p>
+    <div class="detail__infos">
+      <h1>{{ movie$.title }} ( {{movie$.release_date | date:'yyyy'}} )</h1>
+      <p>{{ movie$.overview }}}</p>
+    </div>
+
+    <div class="detail__extra-infos">
+      <div class="detail__extra-infos__item">
+        <h4>Status</h4>
+        <p>{{movie$.status}}</p>
+      </div>
+      <div class="detail__extra-infos__item">
+        <h4>Original Title</h4>
+        <p>{{movie$.original_title}}</p>
+      </div>
+      <div class="detail__extra-infos__item">
+        <h4>Revenue</h4>
+        <p>{{movie$.revenue | number}}</p>
+      </div>
+    </div>
   </div>
+
+    <app-movies-section [movies]="similarMovies$" title="Similar movies"></app-movies-section>
 </main>

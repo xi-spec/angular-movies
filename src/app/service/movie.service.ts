@@ -5,7 +5,7 @@ import { catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 
 import database from '../constant/database';
-import {  MovieDetail, MovieObject, MovieVideo } from '../model/movie';
+import { MovieDetail, MovieObject, MovieVideo } from '../model/movie';
 
 @Injectable({
   providedIn: 'root',
@@ -51,7 +51,17 @@ export class MovieService {
 
   getMovieVideo(id: number): Observable<MovieVideo> {
     return this.http
-      .get<MovieVideo>(`${this.database}/movie/${id}/videos?api_key=${this.apiKey}`)
+      .get<MovieVideo>(
+        `${this.database}/movie/${id}/videos?api_key=${this.apiKey}`
+      )
       .pipe(catchError(this.handleError<MovieVideo>('getMovieVideo')));
+  }
+
+  getSimilarMovie(id: number): Observable<MovieObject> {
+    return this.http
+      .get<MovieObject>(
+        `${this.database}/movie/${id}/similar?api_key=${this.apiKey}`
+      )
+      .pipe(catchError(this.handleError<MovieObject>('getSimilarMovie')));
   }
 }

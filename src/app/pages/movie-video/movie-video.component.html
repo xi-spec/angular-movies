@@ -1,17 +1,10 @@
 <div class="movie-video">
-
-  <button class="movie-video__back-button" (click)="goBack()" *ngIf="showBack">
-    <span class="material-icons-outlined movie-video__arrow_back">
-      arrow_back
-    </span>
-    <span class="movie-video__back-button__text">Back</span>
-  </button>
   <youtube-player
     [videoId]="videoId"
     suggestedQuality="highres"
     height="100%"
     width="100%"
-    startSeconds="0"
+    [playerVars]="{'autoplay': 1}"
   >
   </youtube-player>
 </div>

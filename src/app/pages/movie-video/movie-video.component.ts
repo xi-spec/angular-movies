@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { Component, HostListener, OnInit, SimpleChange } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MovieService } from 'src/app/service/movie.service';
 
@@ -9,8 +9,6 @@ import { MovieService } from 'src/app/service/movie.service';
   styleUrls: ['./movie-video.component.scss'],
 })
 export class MovieVideoComponent implements OnInit {
-  showBack: boolean = false;
-  timeout: any;
   videoId: string;
 
   constructor(
@@ -19,17 +17,10 @@ export class MovieVideoComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
   ngOnInit(): void {
-    if (!this.showBack) {
-      const tag = document.createElement('script');
-      tag.src = 'https://www.youtube.com/iframe_api';
-      document.body.appendChild(tag);
-      this.showBack = true;
-    }
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    document.body.appendChild(tag);
     this.getMovieVideo();
-  }
-
-  goBack(): void {
-    this.location.back();
   }
 
   getMovieVideo(): void {

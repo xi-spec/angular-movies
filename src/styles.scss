@@ -7,7 +7,13 @@
   font-family: $font-primary;
 }
 
-li {
+ol, ul, dl {
+ margin:0 !important;
+}
+
+ li {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -16,7 +22,7 @@ a {
   text-decoration: none !important;
 }
 
-main {
+main{
   margin: 1em;
   @include desktop{
     margin: 2em 4em;
