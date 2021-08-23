@@ -2,10 +2,11 @@
 
 
 ngb-carousel{
+  z-index: 2;
   position: absolute;
   top: 0;
   left: 0;
-  height: 50vh;
+  height: 35vh;
   @include desktop{
     height: 100vh;
   }
