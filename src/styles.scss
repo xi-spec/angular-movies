@@ -7,6 +7,10 @@
   font-family: $font-primary;
 }
 
+*:focus {
+  outline: none !important;
+}
+
 ol, ul, dl {
  margin:0 !important;
 }
@@ -35,6 +39,8 @@ body {
   background-color: $color-background-black !important;
   color: white !important;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow-y:scroll;
+  overflow-x:hidden
 }
 
 .material-icons {

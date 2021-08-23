@@ -1,7 +1,8 @@
 @use '../../../styles/' as *;
 
 .home{
-  padding-top: 40vh;
+  padding-top: 35vh;
+  overflow: hidden;
   margin: 1em 0 1em 2em;
   @include desktop{
     padding-top: 90vh;
