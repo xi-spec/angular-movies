@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { map, filter } from 'rxjs/operators';
 
@@ -25,7 +24,6 @@ export class MoviesListComponent implements OnInit {
     private movieService: MovieService,
     private route: ActivatedRoute,
     private router: Router,
-    private location: Location
   ) {
     router.events
       .pipe(filter((event) => event instanceof NavigationEnd))

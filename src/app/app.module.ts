@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -22,7 +23,6 @@ import { MovieComponent } from './components/movies-section/movie/movie.componen
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { RateStarsComponent } from './components/rate-stars/rate-stars.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
-import { YouTubePlayerModule } from '@angular/youtube-player';
 import { MovieVideoComponent } from './pages/movie-video/movie-video.component';
 
 
