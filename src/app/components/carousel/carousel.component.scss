@@ -2,9 +2,10 @@
 
 
 ngb-carousel{
-  top: -60px;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 50vh;
-  margin-bottom: 20px;
   @include desktop{
     height: 100vh;
   }
