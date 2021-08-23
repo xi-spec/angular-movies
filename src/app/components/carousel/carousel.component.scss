@@ -1,0 +1,11 @@
+@use '../../../styles/' as *;
+
+
+ngb-carousel{
+  top: -60px;
+  height: 50vh;
+  margin-bottom: 20px;
+  @include desktop{
+    height: 100vh;
+  }
+}

@@ -1,0 +1,61 @@
+@use '../../../../styles/' as *;
+
+.mobile-nav {
+  height: 100%;
+  margin: 0 10px;
+
+  @include desktop {
+    display: none;
+  }
+
+  &__list {
+    @include desktop {
+      display: none;
+    }
+    z-index: 3;
+   overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100vh;
+    transition: 0.3s;
+    background-color: $color-orange;
+    padding-top: 20px;
+
+    &__icon{
+      position: absolute;
+      right: 0;
+      padding-right: 20px;
+    }
+  }
+
+
+
+  ul{
+    @include flex(column,flex-start,center);
+    padding-top: 50px;
+  }
+
+  li{
+    cursor: pointer;
+    transition: .5s;
+    margin: 10px 0;
+    border-bottom: 1px solid transparent;
+    font-size: 16px;
+
+    &:hover{
+      transition: .5s;
+      opacity: .8;
+      border-bottom: 1px solid white;
+    }
+  }
+}
+
+.mobile-nav-open {
+  width: 35vw;
+}
+
+.selected{
+  border-bottom: 1px solid white !important;
+}

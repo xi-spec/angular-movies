@@ -1,0 +1,6 @@
+<div class="movie-section">
+  <app-title [title]="title"></app-title>
+  <div class="movie-section__movies-list">
+    <app-movie *ngFor="let movie of movies" [movie]="movie"></app-movie>
+  </div>
+</div>

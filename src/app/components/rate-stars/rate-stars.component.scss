@@ -1,0 +1,20 @@
+@use '../../../styles/' as *;
+
+.star {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  color: #d3d3d3;
+  @include desktop {
+    font-size: 22px;
+  }
+}
+.full {
+  color: $color-orange;
+}
+.half {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  color: $color-orange;
+}

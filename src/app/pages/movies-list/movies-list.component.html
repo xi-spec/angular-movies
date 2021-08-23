@@ -1,0 +1,17 @@
+<main>
+  <app-title [title]="title"></app-title>
+    <ul class="movies-list">
+      <li *ngFor="let movie of movies$">
+        <app-movie [movie]="movie"></app-movie>
+      </li>
+    </ul>
+    <div class="pagination">
+      <app-pagination
+        [page]="page"
+        [collectionSize]="collectionSize"
+        [pageSize]="pageSize"
+        (onPageChange)="onPageChange($event)"
+      >
+      </app-pagination>
+    </div>
+</main>

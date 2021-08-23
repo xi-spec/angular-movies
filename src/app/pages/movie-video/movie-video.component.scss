@@ -1,0 +1,25 @@
+.movie-video{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  &__back-button{
+    position: absolute;
+    top: 70px;
+    margin-left: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+     display: flex;
+     align-items: center;
+
+     span{
+       font-size: 20px;
+     }
+
+     &__text{
+       font-weight: 300;
+       margin-left: 10px;
+     }
+  }
+}

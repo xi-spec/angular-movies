@@ -1,0 +1,30 @@
+@use '../../../styles/' as *;
+
+.header {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  @include desktop {
+    padding: 2em 4em;
+  }
+
+  &__logo {
+    color: $color-orange;
+    font-family: $font-primary;
+    font-size: $size-logo;
+  }
+
+  &__right {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+}

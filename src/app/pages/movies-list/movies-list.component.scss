@@ -1,0 +1,18 @@
+.movies-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  li{
+    margin-bottom: 3%;
+  }
+}
+
+.pagination{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

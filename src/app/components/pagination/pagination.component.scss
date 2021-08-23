@@ -1,0 +1,30 @@
+@use '../../../styles/' as *;
+
+ngb-pagination ::ng-deep a {
+  color: white !important;
+}
+
+ngb-pagination ::ng-deep .page-link{
+ border: none;
+ background-color: black;
+
+ &:focus{
+  box-shadow: none;
+ }
+}
+
+
+ngb-pagination ::ng-deep .page-item.active .page-link {
+  border: none;
+  border-radius: 5px;
+  background-color: $color-orange
+}
+
+
+
+ngb-pagination ::ng-deep .page-item.disabled .page-link {
+  border: none;
+  background-color: black;
+}
+
+

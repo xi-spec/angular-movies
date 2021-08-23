@@ -1,0 +1,35 @@
+<div
+  *ngIf="movie$"
+  class="hero-movie-background"
+  [ngStyle]="{ 'background-image': 'url(' + backgroundImage + ')' }"
+></div>
+
+<div class="hero-movie" *ngIf="movie$">
+  <a class="movie"  routerLink="{{'/movie-detail/ ' + movie$.id}}">
+    <section>
+      <span class="type small-text">{{ movie$.original_title }}</span>
+      <h2 class="title">
+        {{ movie$.title }} ({{ movie$.release_date | date: "yyyy" }})
+      </h2>
+      <div>
+        <div class="rate-container">
+          <app-rate-stars [currentRate]="currentRate"></app-rate-stars>
+          <br />
+          <span class="rate"
+            >Rate: <b>{{ currentRate}}</b></span
+          >
+        </div>
+
+        <div class="timing-container">
+          <span class="material-icons icon">schedule</span>
+          <span class="small-text">1h 57M</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="subtitle">
+      <h4 class="subtitle">Overview</h4>
+      <p class="description">{{ movie$.overview }}</p>
+    </section>
+  </a>
+</div>

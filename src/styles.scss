@@ -1,0 +1,44 @@
+@use './styles/' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-primary;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+main {
+  margin: 1em;
+  @include desktop{
+    margin: 2em 4em;
+  }
+}
+
+body {
+  width: 100% !important;
+  height: 100% !important;
+  background-color: $color-background-black !important;
+  color: white !important;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.material-icons {
+  cursor: pointer;
+  transition: 0.5;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";

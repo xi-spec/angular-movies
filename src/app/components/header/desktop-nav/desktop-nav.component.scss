@@ -1,0 +1,32 @@
+@use '../../../../styles/' as *;
+
+.desktop-nav {
+  display: none;
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    margin-left: 20px;
+    padding-top: 10px;
+
+    &__link {
+      margin-right: 20px;
+      transition: 0.5s;
+      font-weight: 500;
+      font-size: 17px;
+
+      &:hover {
+        color: $color-orange;
+      }
+    }
+  }
+}
+
+
+.selected{
+  color: $color-orange;
+}
+
+

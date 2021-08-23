@@ -1,0 +1,15 @@
+<div>
+  <a class="movie" routerLink="{{'/movie-detail/ ' + movie.id}}" >
+    <img
+      [src]="'http://image.tmdb.org/t/p' + '/original' + movie.poster_path"
+      [alt]="movie.title"
+    />
+    <span class="movie__title">{{ movie.title }} ({{movie.release_date | date:'yyyy'}})</span>
+    <div class="movie__rate">
+      <span class="material-icons-outlined movie__rate__item">
+        star
+        </span>
+        <span class="movie__rate__item movie__rate__number">{{(movie.vote_average / 2) |  number : '1.2-2'}}</span>
+    </div>
+  </a>
+</div>

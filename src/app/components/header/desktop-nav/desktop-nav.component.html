@@ -1,0 +1,46 @@
+<ul class="desktop-nav">
+  <a routerLink="/home">
+    <li
+      class="desktop-nav__link"
+      [ngClass]="{ selected: pathName === '/home' }"
+    >
+      Home
+    </li>
+  </a>
+  <a routerLink="/movies-list/popular">
+    <li
+      class="desktop-nav__link"
+      [ngClass]="{ selected: pathName === '/movies-list/popular' }"
+    >
+      Popular
+    </li>
+  </a>
+  <a routerLink="/movies-list/upcoming">
+    <li
+      class="desktop-nav__link"
+      [ngClass]="{
+        selected: pathName === '/movies-list/upcoming'
+      }"
+    >
+      Upcoming
+    </li>
+  </a>
+  <a routerLink="/movies-list/now_playing">
+    <li
+      class="desktop-nav__link"
+      [ngClass]="{
+        selected: pathName === '/movies-list/now_playing'
+      }"
+    >
+      Now playing
+    </li>
+  </a>
+  <a routerLink="/movies-list/top_rated">
+    <li
+      class="desktop-nav__link"
+      [ngClass]="{ selected: pathName === '/movies-list/top' }"
+    >
+      Top
+    </li>
+  </a>
+</ul>

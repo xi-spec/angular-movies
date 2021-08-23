@@ -1,0 +1,10 @@
+@use '../../../styles/' as *;
+
+.home{
+  margin: 1em 0 1em 2em;
+  @include desktop{
+    margin: 2em 0 2em 4em;
+  }
+}
+
+

@@ -1,0 +1,9 @@
+<ngb-carousel
+  *ngIf="heroMovies"
+  [showNavigationArrows]="showNavigationArrows"
+  [showNavigationIndicators]="showNavigationIndicators"
+>
+  <ng-template ngbSlide *ngFor="let heroMovie of heroMovies">
+    <app-movie-hero [movie$]="heroMovie"></app-movie-hero>
+  </ng-template>
+</ngb-carousel>

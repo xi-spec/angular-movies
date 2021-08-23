@@ -1,0 +1,18 @@
+@use '../../../styles/' as *;
+
+.title {
+
+  h3{
+    font-size: 18px;
+    margin: 0;
+    @include desktop{
+      font-size: 22px;
+    }
+  }
+
+  &__line {
+    width: 50px;
+    border-bottom: 2px solid $color-orange;
+  }
+  margin-bottom: 20px;
+}

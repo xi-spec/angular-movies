@@ -1,0 +1,9 @@
+
+
+.movie-section {
+  margin-bottom: 20px;
+  &__movies-list {
+    display: flex;
+    overflow-x: auto;
+  }
+}

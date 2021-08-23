@@ -1,0 +1,33 @@
+@use '../../../../styles/' as *;
+
+
+
+.search--open {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0 10px;
+  border: 1px solid white;
+
+  &__icon{
+    color: rgb(238, 237, 237);
+  }
+
+  &__input {
+    border: none;
+    background-color: transparent;
+    caret-color: white;
+    color: white;
+    padding:2px 10px;
+    font-size: 15px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+
+.close-icon{
+  color:grey;
+}

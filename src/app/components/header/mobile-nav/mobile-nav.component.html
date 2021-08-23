@@ -1,0 +1,39 @@
+<div class="mobile-nav" (clickOutside)="closeList()">
+  <span class="material-icons" (click)="openList()"> menu </span>
+  <div class="mobile-nav__list" [ngClass]="{ 'mobile-nav-open': isListOpen }">
+    <span class="material-icons mobile-nav__list__icon" (click)="closeList()">
+      close
+    </span>
+    <ul *ngIf="isListOpen">
+      <a routerLink="/home" (click)="closeList()">
+        <li [ngClass]="{ selected: pathName === '/home' }">Home</li>
+      </a>
+      <a routerLink="/movies-list/popular" (click)="closeList()">
+        <li [ngClass]="{ selected: pathName === '/movies-list/popular' }">
+          Popular
+        </li>
+      </a>
+      <a routerLink="/movies-list/upcoming" (click)="closeList()">
+        <li
+          [ngClass]="{
+            selected: pathName === '/movies-list/upcoming'
+          }"
+        >
+          Up coming
+        </li>
+      </a>
+      <a routerLink="/movies-list/now_playing" (click)="closeList()">
+        <li
+          [ngClass]="{
+            selected: pathName === '/movies-list/now_playing'
+          }"
+        >
+          Now playing
+        </li>
+      </a>
+      <a routerLink="/movies-list/top_rated" (click)="closeList()">
+        <li [ngClass]="{ selected: pathName === '/movies-list/top_rated' }">Top</li>
+      </a>
+    </ul>
+  </div>
+</div>

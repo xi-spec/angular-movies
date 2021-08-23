@@ -1,0 +1,29 @@
+@use '../../../styles/' as *;
+
+.footer {
+  width: 100%;
+  height: 100px;
+  background-color: #131313;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  @include desktop {
+    align-items: flex-end;
+    padding: 2em 4em;
+  }
+
+  span {
+    color: grey;
+    font-family: $font-primary;
+  }
+
+  &__logo {
+    font-size: 18px;
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+}
