@@ -11,7 +11,7 @@
   opacity: 0.5;
 
   @include desktop {
-    height: 120vh;
+    height: 90vh;
   }
 }
 
@@ -24,7 +24,7 @@
   justify-content: center;
   @include desktop {
     padding: 4em 4em 0em 4em;
-    height: 100vh;
+    height: 90vh;
   }
 
   .title {
