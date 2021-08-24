@@ -1,7 +1,7 @@
 <div class="mobile-nav" (clickOutside)="closeList()">
   <span class="material-icons" (click)="openList()"> menu </span>
   <div class="mobile-nav__list" [ngClass]="{ 'mobile-nav-open': isListOpen }">
-    <span class="material-icons mobile-nav__list__icon" (click)="closeList()">
+    <span *ngIf="isListOpen" class="material-icons mobile-nav__list__icon" (click)="closeList()">
       close
     </span>
     <ul *ngIf="isListOpen">

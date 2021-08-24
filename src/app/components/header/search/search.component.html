@@ -1,22 +1,20 @@
-<div>
-  <div class="search--open" *ngIf="isSearchInputOpen">
-    <span class="material-icons search--open__icon">search</span>
-    <input
-      autofocus
-      (blur)="closeSearchInput()"
-      (keyup.enter)="search()"
-      class="search--open__input"
-      type="text"
-      name=""
-      id=""
-      autofocus
-    />
-    <span class="material-icons search--open__icon close-icon">close</span>
-  </div>
-  <span
-    *ngIf="!isSearchInputOpen"
-    (click)="openSearchInput()"
-    class="material-icons search--icon"
-    >search</span
-  >
+<div class="search--open" *ngIf="isSearchInputOpen">
+  <span class="material-icons search--open__icon">search</span>
+  <input
+    autofocus
+    (blur)="closeSearchInput()"
+    (keyup.enter)="search()"
+    class="search--open__input"
+    type="text"
+    name=""
+    id=""
+    autofocus
+  />
+  <span class="material-icons search--open__icon close-icon">close</span>
 </div>
+<span
+  *ngIf="!isSearchInputOpen"
+  (click)="openSearchInput()"
+  class="material-icons search--icon"
+  >search</span
+>

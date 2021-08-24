@@ -14,7 +14,7 @@
   filter: brightness(50%);
   opacity: 0.5;
   @include desktop {
-    height: 110vh;
+    height: 100vh;
   }
 }
 
@@ -30,7 +30,7 @@
     justify-content: center;
     position: relative;
     @include desktop{
-      height: 90vh;
+      height: 80vh;
     }
 
     img{
@@ -75,8 +75,13 @@ main{
 
 
   &__genres{
+    position:absolute;
+    top: 50vh;
     @include flex(row,center,center);
     margin-bottom: 20px;
+    @include desktop{
+      top: 90vh;
+    }
 
     ul{
       @include flex(row,flex-start,center);
@@ -110,10 +115,10 @@ main{
   }
 
   &__infos{
-    margin: 50px 0;
+     padding-top: 80px;
+     padding-bottom: 30px;
     @include flex(column,center,center);
     @include desktop{
-      margin: 100px 0;
     }
 
     h1{
