@@ -11,7 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MoviesSectionComponent } from './components/movies-section/movies-section.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
-import { MoviesListComponent } from './pages/movies-list/movies-list.component';
+import { MoviesListComponent } from './components/movies-list/movies-list.component';
 import { MoviesDetailComponent } from './pages/movies-detail/movies-detail.component';
 import { TitleComponent } from './components/title/title.component';
 import { DesktopNavComponent } from './components/header/desktop-nav/desktop-nav.component';
@@ -24,6 +24,9 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { RateStarsComponent } from './components/rate-stars/rate-stars.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { MovieVideoComponent } from './pages/movie-video/movie-video.component';
+import { SearchListComponent } from './pages/search-list/search-list.component';
+import { FormsModule } from '@angular/forms';
+import { MovieCategoryComponent } from './pages/movie-category/movie-category.component';
 
 
 @NgModule({
@@ -46,8 +49,11 @@ import { MovieVideoComponent } from './pages/movie-video/movie-video.component';
     RateStarsComponent,
     PaginationComponent,
     MovieVideoComponent,
+    SearchListComponent,
+    MovieCategoryComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule,HttpClientModule,YouTubePlayerModule],
+  imports: [BrowserModule,FormsModule,
+    AppRoutingModule, NgbModule,HttpClientModule,YouTubePlayerModule],
   providers: [],
   bootstrap: [AppComponent],
 })

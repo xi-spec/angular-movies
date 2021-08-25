@@ -1,9 +1,10 @@
-<ngb-pagination
-  [collectionSize]="collectionSize"
-  [(page)]="page"
-  [pageSize]="pageSize"
-  [maxSize]="maxSize"
-  [boundaryLinks]="true"
-  (pageChange)="newOnPageChange($event)"
-></ngb-pagination>
-
+<div class="pagination">
+  <ngb-pagination
+    [collectionSize]="collectionSize"
+    [(page)]="page"
+    [pageSize]="pageSize"
+    [maxSize]="maxSize"
+    [boundaryLinks]="true"
+    (pageChange)="newOnPageChange($event)"
+  ></ngb-pagination>
+</div>
