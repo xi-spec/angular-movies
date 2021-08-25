@@ -16,6 +16,7 @@ export class SearchComponent implements OnInit {
 
   openSearchInput() {
     this.isSearchInputOpen = true;
+
   }
 
   closeSearchInput() {
@@ -23,6 +24,6 @@ export class SearchComponent implements OnInit {
   }
 
   search() {
-    this.router.navigate(['search'], { queryParams: { name: this.movieName } });
+    this.router.navigate(['search'], { queryParams: { movie: this.movieName } });
   }
 }

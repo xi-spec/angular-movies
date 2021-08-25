@@ -1,6 +1,7 @@
 <div class="search--open" *ngIf="isSearchInputOpen">
   <span class="material-icons search--open__icon">search</span>
   <input
+   autocomplete="off"
     (blur)="closeSearchInput()"
     (keyup.enter)="search()"
     class="search--open__input"

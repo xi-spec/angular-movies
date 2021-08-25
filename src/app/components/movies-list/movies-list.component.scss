@@ -1,11 +1,15 @@
-.movies-list {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+@use '../../../styles/' as *;
 
-  li{
+.movies-list {
+  @include flex(row, center, center);
+
+  ul {
+    width: 100%;
+    @include flex(row, flex-start, center);
+    flex-wrap: wrap;
+  }
+
+  li {
     margin-bottom: 3%;
   }
 }

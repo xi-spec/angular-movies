@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { map,filter } from 'rxjs/operators';
+import { ActivatedRoute, } from '@angular/router';
+import { map, } from 'rxjs/operators';
 
 import { Movie } from 'src/app/model/movie';
 import { MovieService } from 'src/app/service/movie.service';
@@ -19,24 +19,19 @@ export class SearchListComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
     private movieService: MovieService
   ) {
-    route.queryParams.subscribe((params) =>{
-      this.movieName = params['name'];
-      this.getSearchMovies(1);
+    this.route.queryParams.subscribe((params) => {
+      this.page = 1;
+      this.movieName = params['movie'];
+      this.getSearchMovies(this.page);
     });
   }
 
-  ngOnInit(): void {
-    this.route.queryParams.subscribe((params) => {
-      this.movieName = params['name'];
-    });
-    this.getSearchMovies(this.page);
-  }
+  ngOnInit(): void {}
   getSearchMovies(page): void {
     this.movieService
-      .getSearchMovies(this.movieName,page)
+      .getSearchMovies(this.movieName, page)
       .pipe(
         map(({ results, total_pages }) => {
           this.pageSize = results.length;
@@ -48,7 +43,7 @@ export class SearchListComponent implements OnInit {
   }
 
   onPageChange(page: number): void {
-    window.scroll(0,0);
+    window.scroll(0, 0);
     this.getSearchMovies(page);
   }
 }
