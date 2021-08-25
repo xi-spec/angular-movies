@@ -29,6 +29,7 @@ a {
 }
 
 main {
+  min-height: 80vh;
   margin: 1em;
   @include desktop {
     margin: 2em 4em;
