@@ -28,3 +28,9 @@ ngb-pagination ::ng-deep .page-item.disabled .page-link {
 }
 
 
+.pagination{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

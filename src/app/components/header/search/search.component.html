@@ -1,13 +1,14 @@
 <div class="search--open" *ngIf="isSearchInputOpen">
   <span class="material-icons search--open__icon">search</span>
   <input
-    autofocus
+   autocomplete="off"
     (blur)="closeSearchInput()"
     (keyup.enter)="search()"
     class="search--open__input"
     type="text"
-    name=""
-    id=""
+    name="search"
+    id="search"
+    [(ngModel)]="movieName"
     autofocus
   />
   <span class="material-icons search--open__icon close-icon">close</span>

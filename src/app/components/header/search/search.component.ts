@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -7,13 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
   isSearchInputOpen: boolean = false;
+  movieName: string;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
   openSearchInput() {
     this.isSearchInputOpen = true;
+
   }
 
   closeSearchInput() {
@@ -21,6 +24,6 @@ export class SearchComponent implements OnInit {
   }
 
   search() {
-    console.log('Searching');
+    this.router.navigate(['search'], { queryParams: { movie: this.movieName } });
   }
 }

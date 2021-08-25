@@ -1,16 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
-import { map, filter } from 'rxjs/operators';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+
+import { filter,map } from 'rxjs/operators';
 
 import { Movie } from 'src/app/model/movie';
 import { MovieService } from 'src/app/service/movie.service';
 
+
+
 @Component({
-  selector: 'app-movies-list',
-  templateUrl: './movies-list.component.html',
-  styleUrls: ['./movies-list.component.scss'],
+  selector: 'app-movie-category',
+  templateUrl: './movie-category.component.html',
+  styleUrls: ['./movie-category.component.scss']
 })
-export class MoviesListComponent implements OnInit {
+export class MovieCategoryComponent implements OnInit {
   title: string;
   movieCategory: string;
   movies$: Movie[];
@@ -69,4 +72,5 @@ export class MoviesListComponent implements OnInit {
   calculateCollectionSize(totalPages, pageSize): number {
     return totalPages * pageSize;
   }
+
 }

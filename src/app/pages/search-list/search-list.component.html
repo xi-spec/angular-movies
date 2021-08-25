@@ -1,0 +1,12 @@
+<main>
+  <app-title title="Results"></app-title>
+  <p>Find {{ collectionSize }} related movies</p>
+  <app-movies-list [movies]="searchMoviesList$"></app-movies-list>
+  <app-pagination
+    [page]="page"
+    [collectionSize]="collectionSize"
+    [pageSize]="pageSize"
+    (onPageChange)="onPageChange($event)"
+  >
+  </app-pagination>
+</main>
