@@ -1,0 +1,11 @@
+<main>
+  <app-title [title]="title"></app-title>
+  <app-movies-list [movies]="movies$"></app-movies-list>
+  <app-pagination
+    [page]="page"
+    [collectionSize]="collectionSize"
+    [pageSize]="pageSize"
+    (onPageChange)="onPageChange($event)"
+  >
+  </app-pagination>
+</main>

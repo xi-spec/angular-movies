@@ -64,4 +64,16 @@ export class MovieService {
       )
       .pipe(catchError(this.handleError<MovieObject>('getSimilarMovie')));
   }
+
+  getSearchMovies(movieName: string,page:number): Observable<MovieObject> {
+    return this.http
+      .get<MovieObject>(
+        `${this.database}/search/movie?query=${movieName}&api_key=${this.apiKey}&page=${page}`
+      )
+      .pipe(
+        catchError(
+          this.handleError<MovieObject>(`getSearchMovies:${movieName}`)
+        )
+      );
+  }
 }
